@@ -145,3 +145,56 @@ outline: none;
 .trashButton .trashButton-hovered {
   display: none;
 }
+.trashButton svg
+{
+  pointer-events: none;
+}
+
+.completeButton svg
+{
+  pointer-events: none;
+}
+
+.completed
+{
+  text-decoration: line-through;
+}
+
+.removed
+{
+  color: red;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select
+{
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select
+{
+  color: aqua;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+select::after
+{
+  content: "\25BC";
+  position: absolute;
+  background:#3d82eb;
+  top:0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+
