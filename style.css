@@ -1,58 +1,263 @@
-.List {
-  margin: -20px 0;
-  padding: 0;
-  position: relative;
+.container {
+  position: absolute;
+  width: 414px;
+  height: 289px;
+  background: #ffffff;
+  left: 25%;
+  top: 100px;
+  overflow-x: scroll;
+  border: 1px solid blue;
+}
+.container::-webkit-scrollbar {
+  width: 0;
 }
 
-.Calendar {
+.container .Calendar {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  left: 30px;
+  top: 33px;
 }
 
-.Calendar .Calendar-icon {
+.container .Calendar .Calendar-icon {
   text-transform: uppercase;
-  text-align: center;
 }
 
-.Calendar .Calendar-icon .Calendar-icon-month {
+.container .Calendar .Calendar-icon .Calendar-icon-month {
+  text-align: center;
+  width: 15px;
+  height: 4px;
   background-color: #3d82eb;
-  padding: 3px 6px;
-  border-radius: 6px 6px 0 0;
-  font-weight: bold;
-  font-size: 10px;
+  border: 1px solid #3d82eb;
+  border-radius: 2px 2px 0 0;
+  font-size: 5px;
   color: #fff;
 }
 
-.Calendar .Calendar-icon .Calendar-icon-date {
-  border-bottom: 2px solid #3d82eb;
-  border-left: 2px solid #3d82eb;
-  border-right: 2px solid #3d82eb;
-  border-radius: 0 0 6px 6px;
+.container .Calendar .Calendar-icon .Calendar-icon-date {
+  text-align: center;
+  width: 17px;
+  height: 11px;
+  text-align: center;
+  border: 1px solid #3d82eb;
+  box-sizing: border-box;
+  border-radius: 0 0 3px 3px;
+  font-size: 7px;
+  color: #3d82eb;
   background-color: #fff;
-  font-size: 12px;
+}
+
+.container .Calendar .Calendar-label {
+  position: relative;
+  width: 49px;
+  height: 20px;
+  left: 13px;
+
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #323232;
+}
+.todo-container {
+  left: 22px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #4e4e4e;
+  position: absolute;
+  top: 70px;
+  width: 369px;
+}
+
+.todo-list {
+  width: 369px;
+  padding: 0;
+}
+.todo {
+  width: 369px;
+  list-style-type: none;
+}
+.todo li {
+  width: 349px;
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 20px 5px 0px;
+}
+.todo li:hover {
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.todo-item-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1px;
+  line-height: 12px;
+}
+
+.completeButton {
+  margin-left: 0px;
+  padding: 0 10px;
+}
+
+.trashButton {
+  position: absolute;
+  right: 8.5px;
+}
+
+.completeButton:hover .completeButton-default {
+  display: none;
+}
+.completeButton:hover .completeButton-hovered {
+  display: block;
+}
+
+.completeButton .completeButton-hovered {
+  display: none;
+}
+
+.checkedIcon {
+  margin-left: 0px;
+  padding: 0 10px;
+  display: none;
+}
+
+.deletedIcon {
+  margin-left: 0px;
+  margin-top: -5px;
+  padding: 0 10px;
+  display: none;
+}
+
+.trashButton:hover .trashButton-default {
+  display: none;
+}
+
+.trashButton:hover .trashButton-hovered {
+  display: block;
+}
+
+.trashButton .trashButton-hovered {
+  display: none;
+}
+.trashButton svg {
+  pointer-events: none;
+}
+
+.completeButton svg {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.removed {
+  color: red;
+}
+.ListNavigation-ellipsis:hover .Listnavigation-ellipsis--default {
+  display: none;
+}
+
+.ListNavigation-ellipsis:hover .Listnavigation-ellipsis--hovered {
+  display: block;
+}
+
+.ListNavigation-ellipsis .Listnavigation-ellipsis--hovered {
+  display: none;
+}
+
+.ListNavigation-items {
+  display: none;
+}
+.ListNavigation-ellipsis-rectangle {
+  position: absolute;
+  width: 26px;
+  height: 16px;
+  left: 361px;
+  top: 33px;
+  background: #ffffff;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.ListNavigation-ellipsis-rectangle-shadow {
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.15);
+}
+
+.ListNavigation-ellipsis {
+  position: relative;
+  width: 11px;
+  height: 3px;
+  left: 7px;
+  top: -7px;
+  cursor: pointer;
+}
+
+.ListNavigation-items {
+  width: 57px;
+  height: 61px;
+  position: relative;
+  left: 330px;
+  top: 20px;
+  z-index: 1;
+  list-style-type: none;
+  margin: 28px 0 0 0;
+  padding: 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 0 5px 5px;
+}
+.ListNavigation-items-name {
+  width: 39px;
+  height: 9px;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 8px;
+  color: #b7b7b7;
+  border-bottom: 1px solid #ededed;
+}
+
+.container .ListNavigation-items-name:hover {
+  color: #4e4e4e;
+}
+
+.menu-active {
+  display: block;
+}
+
+.container .selected1 {
   color: #3d82eb;
 }
 
-.Calendar .Calendar-label {
-  font-size: 28px;
-  margin-left: 20px;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
+.container .List {
+  margin: -20px;
+  position: absolute;
+  width: 100%;
 }
 
-.NewItem {
+.container .NewItem {
   margin: 0px;
-  padding: 15px 20px 5px 20px;
-  position: relative;
+  padding-left: 30px;
+  padding-top: 25px;
   display: flex;
   flex-direction: row;
 }
 
-.NewItem .NewItem-create .NewItem-create-icon {
-  padding: 0 5px;
+.container .NewItem-create-icon {
   cursor: pointer;
+  padding-right: 10px;
 }
 
 .NewItem
@@ -71,130 +276,18 @@
   display: none;
 }
 
-.NewItem-input
-{
-width: 100%;
-}
-.NewItem-input--input
-{
-font-size: 18px;
-width: 100%;
-border: none;
-padding: 3px 0;
-color: #323232;
-outline: none;
-}
-
-.todo-list {
-  margin: 20px 0;
-  padding: 0;
-  position: relative;
-}
-.todo {
-  margin: 0 0px;
-  padding: 0;
+.container .NewItem-input {
   width: 100%;
-  list-style-type: none;
 }
-.todo li {
+.container .NewItem-input--input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #3d82eb;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #EDEDED;
-
-  padding: 15px 20px 5px 20px;
-}
-.todo li:hover
-{
-  cursor: pointer;
-  background: #fff;
-  box-shadow: 0px 3px 6px 1px  rgba(0,0,0,0.15);
-  border-radius: 5px;
-}
-
-.completeButton
-{
-  padding: 0 16px;
-}
-
-.trashButton
-{
-  padding: 0 15px;
-}
-
-.completeButton:hover .completeButton-default {
-  display: none;
-}
-
-.completeButton:hover .completeButton-hovered {
-  display: block;
-}
-
-.completeButton .completeButton-hovered {
-  display: none;
-}
-
-.trashButton:hover .trashButton-default {
-  display: none;
-}
-
-.trashButton:hover .trashButton-hovered {
-  display: block;
-}
-
-.trashButton .trashButton-hovered {
-  display: none;
-}
-.trashButton svg
-{
-  pointer-events: none;
-}
-
-.completeButton svg
-{
-  pointer-events: none;
-}
-
-.completed
-{
-  text-decoration: line-through;
-}
-
-.removed
-{
-  color: red;
-}
-select{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
   border: none;
+  padding: 3px 0;
+  outline: none;
 }
-
-.select
-{
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-select
-{
-  color: aqua;
-  width: 10rem;
-  cursor: pointer;
-  padding: 1rem;
-}
-select::after
-{
-  content: "\25BC";
-  position: absolute;
-  background:#3d82eb;
-  top:0;
-  right: 0;
-  padding: 1rem;
-  pointer-events: none;
-}
-
-
