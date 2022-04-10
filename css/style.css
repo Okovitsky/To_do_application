@@ -6,7 +6,8 @@
   left: 25%;
   top: 100px;
   overflow-x: scroll;
-  border: 1px solid blue;
+  border: 2px solid blue;
+  border-radius: 13px;
 }
 .container::-webkit-scrollbar {
   width: 0;
@@ -108,11 +109,23 @@
 .completeButton {
   margin-left: 0px;
   padding: 0 10px;
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .trashButton {
   position: absolute;
   right: 8.5px;
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .completeButton:hover .completeButton-default {
@@ -150,11 +163,11 @@
 .trashButton .trashButton-hovered {
   display: none;
 }
-.trashButton svg {
+.trashButton img {
   pointer-events: none;
 }
 
-.completeButton svg {
+.completeButton img {
   pointer-events: none;
 }
 
@@ -258,6 +271,12 @@
 .container .NewItem-create-icon {
   cursor: pointer;
   padding-right: 10px;
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .NewItem
