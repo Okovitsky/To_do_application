@@ -1,4 +1,4 @@
 function seteditAction() {
-    document.toDoForm.action = "handleActions.php";
+    document.toDoForm.action = "php/handleActions.php";
     document.toDoForm.submit();
 }

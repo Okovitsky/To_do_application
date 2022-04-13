@@ -1,16 +1,5 @@
+<?php require 'db_connection.php'?>
 <?php
-function make_connection()
-{
-  $host = "localhost";
-  $userName = "root";
-  $password = "";
-  $db_name = "to_do_list";
-  $con = new mysqli($host, $userName, $password, $db_name);
-  if ($con->connect_error) {
-    echo "Ошибка подключения";
-  }
-  return $con;
-}
 function add_items($value)
 {
   $con = make_connection();
@@ -55,9 +44,10 @@ function get_removed_items()
   return $result;
 }
 
-function delete_items($id)
+/*function delete_items($id)
 {
   $con = make_connection();
-  $query = "DELETE FROM `todos` WHERE id='$id'";
+  $query = "DELETE FROM todos WHERE id='$id'";
   $con->query($query);
-}
+}*/
+?>

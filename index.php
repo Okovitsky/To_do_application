@@ -1,4 +1,4 @@
-<?php require "db_connection.php" ?>
+<?php require "php/db/requests.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="css/style.css" />
@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/handler.js"></script>
   <title>To Do List</title>
 </head>
 
@@ -37,15 +38,15 @@
           </div>
         </div>
         <ul class="ListNavigation-items">
-          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="InProgress" type ="sumbmit">In Progress</button></li>
-          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="Completed" type ="sumbmit" >Completed</button></li>
-          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="Removed" type ="sumbmit" >Removed</button></li>
+          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="InProgress" type="sumbmit">In Progress</button></li>
+          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="Completed" type="sumbmit">Completed</button></li>
+          <li class="ListNavigation-items-name"><button class="ListNavigationButton" name="Removed" type="sumbmit">Removed</button></li>
         </ul>
       </div>
       <div class="todo-container">
         <ul class="todo-list">
           <?php
-          require "todoList.php";
+          require "php/todoList.php";
           ?>
         </ul>
       </div>

@@ -1,4 +1,4 @@
-<?php require 'db_connection.php' ?>
+<?php require 'db/requests.php' ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["add"])) {
@@ -10,6 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else if (isset($_POST["delete"])) {
         remove_items($_POST["delete"]);
     }
-    header("location: index.php");
+    header("location: ../index.php");
 }
 ?>
