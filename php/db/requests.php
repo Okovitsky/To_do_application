@@ -44,10 +44,10 @@ function get_removed_items()
   return $result;
 }
 
-/*function delete_items($id)
+function delete_items($id)
 {
   $con = make_connection();
   $query = "DELETE FROM todos WHERE id='$id'";
   $con->query($query);
-}*/
+}
 ?>

@@ -175,7 +175,6 @@
 }
 
 .removed {
-  pointer-events: none;
   color: red;
 }
 .ListNavigation-ellipsis:hover .Listnavigation-ellipsis--default {
@@ -325,4 +324,14 @@
   width:100%;
   justify-content: center;
   padding: 3px;
+}
+.deleteButton
+{
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  padding: 0;
 }
