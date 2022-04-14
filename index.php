@@ -1,4 +1,4 @@
-<?php require "php/db/requests.php"?>
+<?php require "php/db/requests.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="css/style.css" />
