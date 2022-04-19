@@ -101,6 +101,7 @@
 
 .todo-item-text {
   font-family: "Roboto";
+  padding-left: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 1px;
@@ -119,7 +120,7 @@
 }
 
 .trashButton {
-  
+  right: -10px;
   position: relative;
   background: none;
 	color: inherit;
@@ -320,7 +321,10 @@
   padding: 0;
 }
 .item-text
-{
+{ font-family: "Roboto";
+  margin-left: 10px;
+  font-style: normal;
+  line-height: 12px;
   width:100%;
   justify-content: center;
   padding: 3px;

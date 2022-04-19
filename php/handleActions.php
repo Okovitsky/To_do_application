@@ -1,4 +1,4 @@
-<?php require 'db/requests.php' ?>
+<?php require 'db/requests.php'?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["add"])) {
